@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Tafakkur - The Sacred Pause | Webinar by Aspire College</title>
+    <meta name="description" content="Join our transformative webinar on Tafakkur (The Sacred Pause) to find calm, clarity, and spiritual connection in everyday life.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2C5F7C;
+            --secondary: #4A90A4;
+            --accent: #E8A87C;
+            --dark: #1A3A4A;
+            --light: #F7F9FB;
+            --text: #333;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background: #F5B991;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .problem-solution {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .problem-solution p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .problem-solution strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Takeaways Grid */
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .takeaway-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+
+        .takeaway-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .takeaway-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .takeaway-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Event Details */
+        .event-details {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .event-details h2 {
+            color: white;
+        }
+
+        .event-info {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .event-info p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 30px 0 20px;
+            color: var(--accent);
+        }
+
+        .time-zones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .time-zone {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: white;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            .takeaways-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .time-zones {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Intro Text */
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Calm & Clarity: Master Tafakkur (The Sacred Pause) in Everyday Life</h1>
+            <p>Join our most-requested webinar to transform your daily routine into a journey of mindful awareness, inner peace, and profound spiritual connection.</p>
+            <a href="https://rebrand.ly/asppsy2" class="btn btn-primary">REGISTER NOW</a>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="section-alt">
+        <div class="container problem-solution">
+            <h2>Feeling Lost in the 'Gafla' (Heedlessness) of Modern Life?</h2>
+            <p>In a world of constant notifications and endless distractions, it's easy to feel disconnected—from ourselves, our purpose, and our faith. This state of <strong>Gafla (heedlessness)</strong> can leave us feeling anxious, ungrateful, and spiritually adrift.</p>
+            <p><strong>But what if the solution wasn't to do more, but to pause?</strong></p>
+            <p>This webinar introduces the profound practice of <strong>Tafakkur (Contemplation)</strong>. It's a powerful, practical tool from the Islamic tradition, presented by the Department of Psychology, to help you find focus, peace, and presence in your busy life.</p>
+        </div>
+    </section>
+
+    <!-- What You Will Learn Section -->
+    <section>
+        <div class="container">
+            <h2>Discover Your Path to Mindful Awareness</h2>
+            <p class="intro-text">In this transformative session, our expert faculty will guide you through:</p>
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <h3>What is Tafakkur?</h3>
+                    <p>Understanding the deep meaning and power of "The Sacred Pause."</p>
+                </div>
+                <div class="takeaway-card">
+                    <h3>Healing Heedlessness (Gafla)</h3>
+                    <p>Learn practical techniques to overcome distraction with mindful awareness.</p>
+                </div>
+                <div class="takeaway-card">
+                    <h3>Inner Regulation & Gratitude</h3>
+                    <p>Discover how contemplation can calm your emotions and cultivate deep, genuine gratitude.</p>
+                </div>
+                <div class="takeaway-card">
+                    <h3>Anchoring the Heart</h3>
+                    <p>Find simple ways to anchor your heart and bring your faith into sharp, clear focus every day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+        <div class="container">
+            <h2>Save Your Spot!</h2>
+            <div class="event-info">
+                <p><strong>This is a live online webinar.</strong></p>
+                <p>A joining link will be sent to your email after registration.</p>
+                <p class="event-date">Saturday, 8th November 2025</p>
+                <div class="time-zones">
+                    <div class="time-zone">07:00 PM IST<br><small>(India)</small></div>
+                    <div class="time-zone">05:30 PM GST<br><small>(UAE)</small></div>
+                    <div class="time-zone">01:30 PM GMT<br><small>(UK)</small></div>
+                    <div class="time-zone">09:30 AM EST<br><small>(USA/Canada)</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-alt">
+        <div class="container about">
+            <h2>Presented by Experts in Faith & Psychology</h2>
+            <p>This webinar is presented by the <strong>Department of Psychology at Aspire College of Excellence</strong>. You will be learning from expert faculty from the <strong>Diploma in Islamic Counseling Psychology & Personality Development</strong>, who specialize in bridging the gap between modern psychological science and timeless Islamic wisdom.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Begin Your Journey of Contemplation?</h2>
+            <p>This is one of our most requested topics, and spots are limited. Register now to secure your place and learn how to anchor your heart in a distracted world.</p>
+            <a href="https://rebrand.ly/asppsy2" class="btn btn-secondary">REGISTER FOR FREE</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aspire College of Excellence - Department of Psychology. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
